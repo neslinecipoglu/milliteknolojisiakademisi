@@ -1,0 +1,39 @@
+.divider-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.divider {
+    width: 70%;
+    white-space: nowrap;
+    font-size: 14px;
+    line-height: 1.55;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    margin-top: 80px;
+}
+
+.divider::before {
+    content: "";
+    flex: 1;
+    height: 1px;
+    border-top: 1px dashed $color-divider;
+    margin-right: 10px;
+}
+
+.divider::after {
+    content: "";
+    flex: 1;
+    border-top: 1px dashed $color-divider;
+    margin-left: 10px;
+}
+
+.footer-divider {
+    border: 0;
+    border-top-width: 1px;
+    border-top-color: $color-divider;
+    border-top-style: solid;
+    margin: 50px 0;
+    width: 100%;
+}

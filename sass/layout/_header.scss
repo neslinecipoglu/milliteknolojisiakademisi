@@ -1,0 +1,93 @@
+/* desktop header */
+
+.desktop-header {
+    display: flex;
+    justify-content: space-around;
+    max-width: 100%;
+    margin: 40px;
+    &__left-box {
+        display: flex;
+        justify-content: flex-start;
+        gap: 35px;
+        align-items: center;
+        &--logo {
+            display: flex;
+        }
+        .header-divider {
+            width: 1px;
+            height: 40px;
+            background-color: $header-divider;
+        }
+        &--nav-item {
+            display: block;
+            font-size: 14px;
+            position: relative;
+            line-height: 1;
+            -webkit-text-decoration: none;
+            text-decoration: none;
+            font-weight: 500;
+            letter-spacing: 0.1em;
+            color: $color-black;
+        }
+
+        &--nav-item::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -0.1em;
+            margin: 0 auto -2px;
+            height: 1px;
+            width: 0%;
+            background: $color-black;
+            -webkit-transition: all 0.5s;
+            transition: all 0.5s;
+        }
+
+        &--nav-item:hover::after {
+            width: 100%;
+        }
+
+        &--nav-item:hover {
+            outline-width: 0;
+        }
+    }
+    &__right-box {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 20px;
+        &--button {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            text-transform: uppercase;
+            box-sizing: border-box;
+            padding-left: 18px;
+            padding-right: 18px;
+            font-family:
+                DM Sans,
+                sans-serif;
+            border-radius: 4px;
+            font-weight: 600;
+            line-height: 1;
+            cursor: pointer;
+            border: 1px solid transparent;
+            background-color: $color-btn-red;
+            color: $color-white;
+            height: 40px;
+            border-radius: 15px;
+            font-weight: 500;
+            font-size: 14px;
+            letter-spacing: 0.1em;
+        }
+        &--button:hover {
+            background-color: $color-btn-hover;
+        }
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .desktop-header {
+        display: none;
+    }
+}

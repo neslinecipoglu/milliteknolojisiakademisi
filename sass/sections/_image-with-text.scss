@@ -1,0 +1,111 @@
+/* 4. section image with text */
+.text-with-right-image-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.text-with-left-image-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.text-with-right-image {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 24px;
+
+    @media screen and (min-width: 980px) {
+        justify-content: center;
+        flex-wrap: nowrap;
+        flex-direction: row-reverse;
+        align-items: center;
+        max-width: 1366px;
+    }
+    &__img-wrapper {
+        max-width: 40%;
+
+        @media screen and (min-width: 980px) {
+            margin-left: 35px;
+        }
+
+        &--img {
+            width: 100%;
+        }
+    }
+    &__text {
+        padding-right: 0;
+        margin-top: 24px;
+        @media screen and (min-width: 980px) {
+            font-size: 18px;
+        }
+        &--header {
+            font-size: 22px;
+            line-height: 1.55;
+            text-decoration: none;
+            font-weight: 500;
+            margin-bottom: 25px;
+        }
+        &--text {
+            color: inherit;
+            font-size: inherit;
+            line-height: 1.55;
+            text-decoration: none;
+        }
+    }
+}
+
+/* 5. section image with text */
+
+.text-with-left-image {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 90px 0;
+
+    @media screen and (min-width: 980px) {
+        max-width: 1366px;
+        flex-wrap: nowrap;
+        padding: 0 16px;
+    }
+
+    &__img-wrapper {
+        max-width: 46%;
+        @media screen and (min-width: 980px) {
+            max-width: 35%;
+        }
+
+        &--img {
+            width: 100%;
+        }
+    }
+    &__text {
+        padding-right: 0;
+        margin-top: 24px;
+        @media screen and (min-width: 980px) {
+            padding-left: 96px;
+            font-size: 18px;
+        }
+
+        &--header {
+            font-size: 22px;
+            line-height: 1.55;
+            text-decoration: none;
+            font-weight: 500;
+            margin-bottom: 25px;
+        }
+
+        &--text {
+            color: inherit;
+            font-size: inherit;
+            line-height: 1.55;
+            text-decoration: none;
+        }
+    }
+}
+
+.section-bg {
+    background: $color-section-bg;
+}

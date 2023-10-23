@@ -1,0 +1,31 @@
+.btn-wrap {
+    display: flex;
+    justify-content: center;
+}
+.btn-red {
+    cursor: pointer;
+    border: 1px solid transparent;
+    background-color: $color-btn-red;
+    color: $color-white;
+    height: 40px;
+    border-radius: 15px;
+    font-weight: 500;
+    margin-top: 36px;
+    font-size: 14px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    padding: 0 32px;
+    justify-content: center;
+    display: flex;
+    width: 100%;
+    @media screen and (min-width: 980px) {
+        width: 20%;
+    }
+    &:hover {
+        background-color: $color-btn-hover;
+    }
+}

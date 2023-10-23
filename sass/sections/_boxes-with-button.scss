@@ -1,0 +1,133 @@
+/*section2- Boxes with Button*/
+.boxes-with-button {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+  &__container {
+    &--row {
+      gap: 20px 12px;
+      padding: 0 16px;
+      margin-left: 0 auto 20px 0;
+      @media screen and (min-width: 980px) {
+        max-width: 1366px;
+      }
+    }
+    @media screen and (min-width: 980px) {
+      max-width: 1366px;
+    }
+  }
+  &__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    @media screen and (min-width: 980px) {
+      width: 50%;
+    }
+
+    &--heading {
+      line-height: 1.55;
+      font-weight: 500;
+      font-size: 28px;
+      margin: 0;
+      text-align: center;
+      letter-spacing: -1px;
+      color: $color-black;
+      margin-top: 50px;
+      margin-bottom: 16px;
+      width: 70%;
+      @media screen and (min-width: 980px) {
+        font-size: 40px;
+      }
+    }
+
+    &--text {
+      color: $color-text;
+      font-size: 16px;
+      line-height: 1.55;
+      text-decoration: none;
+      text-align: center;
+      margin-bottom: 50px;
+      width: 90%;
+      @media screen and (min-width: 980px) {
+        font-size: 20px;
+        width: 60%;
+      }
+    }
+  }
+
+  .box {
+    outline: 0;
+    text-decoration: none;
+    color: $color-black;
+    background-color: $color-white;
+    box-sizing: border-box;
+    border-radius: 8px;
+    border: 1px solid $color-box-border-dark;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    transition:
+      transform 150ms ease,
+      box-shadow 100ms ease;
+    padding: 24px 24px 24px 48px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+    &__logo--img {
+      width: 50%;
+    }
+    &__header {
+      font-size: 22px;
+      line-height: 1.55;
+      text-decoration: none;
+      font-weight: 500;
+      margin-top: 16px;
+    }
+
+    &__description {
+      color: $color-text;
+      font-size: 14px;
+      line-height: 1.55;
+      text-decoration: none;
+      margin-top: 12px;
+    }
+
+    &__button {
+      padding: 0 14px;
+      display: inline-block;
+      width: auto;
+      line-height: 1;
+      font-size: 14px;
+      user-select: none;
+      cursor: pointer;
+      border: 1px solid $color-text;
+      background-color: transparent;
+      color: $color-text;
+      height: 40px;
+      border-radius: 15px;
+      font-weight: 500;
+      margin-top: 24px;
+    }
+  }
+
+  .box::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 4px;
+    background: $color-box-bg;
+  }
+  .box:hover {
+    transform: scale(1.02);
+    box-shadow: $color-boxes-with-button-section-box-shadow;
+  }
+  .box:hover::before {
+    background: $color-btn-red;
+  }
+}
